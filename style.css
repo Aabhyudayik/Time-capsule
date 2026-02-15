@@ -1,1 +1,32 @@
 
+#title{
+    color: bisque;
+    
+}
+.polaroid{
+    
+    max-width:400px;
+    width: 100;
+    height: auto;
+    /* Polaroid styling */
+    border: 20px solid white;
+    border-bottom: 60px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: white;
+    filter: sepia(0.1) contrast(1.0) brightness(1.1);
+}
+@keyframes flyIn {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#date {
+    display:none;
+  animation: flyIn 0.8s ease-out forwards;
+}

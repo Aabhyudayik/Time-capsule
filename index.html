@@ -8,12 +8,15 @@
 </head>
 
 <body>
-    <H1>TIME CAPSULE</H1>
+    <H1 id="title">TIME CAPSULE</H1>
     <input id="photo" type="file" accept="image/*">
-    <img id="pic" alt="This is your time capsule picture">
     <input id="text" type="text" placeholder="Write a small caption" >
-    <input id="email" type="email" placeholder="Write your email">
+    <input id="email" type="email" placeholder="Write your email" required>
     <button id="button">SUBMIT</button>
+    <div class="container">
+    <input id="date" type="datetime-local">
+    <img id="pic" alt="This is your time capsule picture">
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
