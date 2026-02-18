@@ -68,8 +68,13 @@ body{
     animation: flyIn 0.8s ease-out forwards;
     
     border:none;
-    bottom: 26px; /* distance from bottom */
-    left: 32%;
+    bottom: 15px; /* distance from bottom */
+    left: 24%;
     transform: translateX(-50%);
+    font-family: cursive;
+    font-size: medium;
+    text-transform: uppercase;
+    text-align: center;
+    resize: none;
 
 }
