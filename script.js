@@ -44,5 +44,56 @@ function collect(){
 
 
 }
+ console.log(tsParticles);
+      // All options can be found here: https://particles.js.org/docs/interfaces/Options_Interfaces_IOptions.IOptions.html
+     
+      const options = {
+        background: {
+          color: "transparent", // the canvas background color
+        },
+        interactivity: {
+          events: {
+            onClick: {
+              // this handles the mouse click event
+              enable: true,
+              mode: "push", // this adds particles
+            },
+            onHover: {
+              // this handles the mouse hover event
+              enable: false,
+              mode: "repulse", // this make particles move away from the mouse
+            },
+          },
+          modes: {
+            push: {
+              quantity: 2, // number of particles to add
+            },
+            repulse: {
+              distance: 100, // the distance of the particles from the mouse(this is null rn)
+            },
+          },
+        },
+        particles: {
+          links: {
+            enable: true, // this enables links between aka the lines drawn between particles
+            opacity: 0,
+            distance: 200,
+          },
+          move: {
+            enable: true, // this makes particles move
+            speed: { min: 1, max: 3 }, // this is the speed of the particles
+          },
+          opacity: {
+            value: { min: 0.3, max: 0.7 }, // this sets the opacity of the particles
+          },
+          size: {
+            value: { min: 1, max: 20 }, // this sets the size of the particles
+          },
+        },
+      };
+
+      // tsParticles.load has two parameters, the first one is the id of the container, the second one is an object with the options
+      tsParticles.load("tsparticles", options);
+
 
 
