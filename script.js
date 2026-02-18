@@ -1,7 +1,7 @@
 // @ts-nocheck
 let photo=document.getElementById('photo');
 let pic=document.getElementById("pic");
-let text=document.getElementById("text");
+let caption=document.getElementById("caption");
 let email=document.getElementById("email");
 let button=document.getElementById("button");
 let date=document.getElementById("date");
@@ -27,18 +27,22 @@ pic.addEventListener("load",time);
 function time(){
     date.style.display="block";
 }
+pic.addEventListener("load",cap);
+function cap(){
+    caption.style.display="block";
+}
 
 button.addEventListener("click",collect);
 function collect(){
     const capsule_element={
         
-        text:text.value,
+        caption:caption.value,
         email:email.value,
         pic:base64.value,
         date:date.value
 
     }
-    console.log("Yes it worked");
+    
     
     
 
