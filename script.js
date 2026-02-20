@@ -5,6 +5,7 @@ let caption=document.getElementById("caption");
 let email=document.getElementById("email");
 let button=document.getElementById("button");
 let date=document.getElementById("date");
+let msg=document.getElementById("msg")
 photo.addEventListener("change", display);
 function display(){
     const reader= new FileReader();
@@ -36,18 +37,28 @@ button.addEventListener("click",collect);
 function collect(){
     const capsule_element={
         
-        caption:caption.value,
         email:email.value,
         pic:base64.value,
-        date:date.value
+        
 
     }
-    
-    
-    
-
+  
 
 }
+button.addEventListener("click",message)
+  function message(){
+    email.style.display="none"
+    pic.style.display="none"
+    date.style.display="none"
+    button.style.display="none"
+    caption.style.display="none"
+    photo.style.display="none"
+    msg.textContent="Your time capsule is sealed! It will surprise you when you least expect it✨📸 "
+
+
+
+  }
+
  console.log(tsParticles);
       // All options can be found here: https://particles.js.org/docs/interfaces/Options_Interfaces_IOptions.IOptions.html
      
