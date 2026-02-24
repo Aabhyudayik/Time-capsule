@@ -5,7 +5,8 @@ let caption=document.getElementById("caption");
 let email=document.getElementById("email");
 let button=document.getElementById("button");
 let date=document.getElementById("date");
-let msg=document.getElementById("msg")
+let msg=document.getElementById("msg");
+console.log(msg);
 photo.addEventListener("change", display);
 function display(){
     const reader= new FileReader();
@@ -54,10 +55,12 @@ button.addEventListener("click",message)
     caption.style.display="none"
     photo.style.display="none"
     msg.textContent="Your time capsule is sealed! It will surprise you when you least expect it✨📸 "
-
+    
 
 
   }
+  
+  
 
  console.log(tsParticles);
       // All options can be found here: https://particles.js.org/docs/interfaces/Options_Interfaces_IOptions.IOptions.html
@@ -91,7 +94,7 @@ button.addEventListener("click",message)
         particles: {
           links: {
             enable: true, // this enables links between aka the lines drawn between particles
-            opacity: 0,
+            opacity: 0.1,
             distance: 200,
           },
           move: {
@@ -102,13 +105,15 @@ button.addEventListener("click",message)
             value: { min: 0.3, max: 0.7 }, // this sets the opacity of the particles
           },
           size: {
-            value: { min: 1, max: 20 }, // this sets the size of the particles
+            value: { min: 1, max: 3 }, // this sets the size of the particles
           },
         },
       };
 
       // tsParticles.load has two parameters, the first one is the id of the container, the second one is an object with the options
       tsParticles.load("tsparticles", options);
+
+      
 
 
 
