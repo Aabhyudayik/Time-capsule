@@ -6,6 +6,7 @@ let email=document.getElementById("email");
 let button=document.getElementById("button");
 let date=document.getElementById("date");
 let msg=document.getElementById("msg");
+let sound=document.getElementById("sound");
 console.log(msg);
 photo.addEventListener("change", display);
 function display(){
@@ -58,6 +59,10 @@ button.addEventListener("click",message)
     
 
 
+  }
+  button.addEventListener("click",audio)
+  function audio(){
+    sound.play()
   }
   
   
