@@ -98,8 +98,8 @@ button.addEventListener("click",message)
         },
         particles: {
           links: {
-            enable: true, // this enables links between aka the lines drawn between particles
-            opacity: 0.1,
+            enable: false, // this enables links between aka the lines drawn between particles
+            opacity: 0.0,
             distance: 200,
           },
           move: {
@@ -107,10 +107,10 @@ button.addEventListener("click",message)
             speed: { min: 1, max: 3 }, // this is the speed of the particles
           },
           opacity: {
-            value: { min: 0.3, max: 0.7 }, // this sets the opacity of the particles
+            value: { min: 0.0, max: 0.3 }, // this sets the opacity of the particles
           },
           size: {
-            value: { min: 1, max: 3 }, // this sets the size of the particles
+            value: { min: 27, max: 28 }, // this sets the size of the particles
           },
         },
       };
