@@ -7,6 +7,7 @@ let button=document.getElementById("button");
 let date=document.getElementById("date");
 let msg=document.getElementById("msg");
 let sound=document.getElementById("sound");
+let container=document.getElementById("container");
 console.log(msg);
 photo.addEventListener("change", display);
 function display(){
@@ -36,17 +37,22 @@ function cap(){
 }
 
 button.addEventListener("click",collect);
-function collect(){
-    const capsule_element={
-        
-        email:email.value,
-        pic:base64.value,
-        
+async function collect(){
+ const image=await html2canvas(container);
+ const fimage=image.toDataURL();
 
-    }
-  
+ await fetch("/submit",{
+  method:"POST",
+  headers:{
+    "Content-Type":"application/json"
+  },
+  body:JSON.stringify({fimage,email:email.value})
 
+
+})
+    
 }
+
 button.addEventListener("click",message)
   function message(){
     email.style.display="none"
@@ -110,7 +116,7 @@ button.addEventListener("click",message)
             value: { min: 0.0, max: 0.3 }, // this sets the opacity of the particles
           },
           size: {
-            value: { min: 27, max: 28 }, // this sets the size of the particles
+            value: { min: 27, max: 30 }, // this sets the size of the particles
           },
         },
       };
