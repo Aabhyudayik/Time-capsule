@@ -38,8 +38,13 @@ function cap(){
 
 button.addEventListener("click",collect);
 async function collect(){
+  caption.style.animation = 'none'
+date.style.animation = 'none'
+caption.style.opacity = '1'
+date.style.opacity = '1'
  const image=await html2canvas(container);
  const fimage=image.toDataURL();
+ 
 
  await fetch("/submit",{
   method:"POST",
@@ -47,12 +52,13 @@ async function collect(){
     "Content-Type":"application/json"
   },
   body:JSON.stringify({fimage,email:email.value})
+  
 
 
 })
-    
-}
 
+   
+}
 button.addEventListener("click",message)
   function message(){
     email.style.display="none"
@@ -66,6 +72,8 @@ button.addEventListener("click",message)
 
 
   }
+ 
+
   button.addEventListener("click",audio)
   function audio(){
     sound.play()
