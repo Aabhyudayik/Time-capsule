@@ -8,7 +8,7 @@ const transporter = nodemailer.createTransport({
         pass: process.env.EMAIL_PASSWORD
     }
 })
-nodeCron.schedule('0 * * * * ', async () => {
+nodeCron.schedule('* * * * * ', async () => {
    const capsules =await Capsule.find({random_date:{$lte: new Date()}})
    for(const capsule of capsules){
     const mailOptions={
@@ -28,7 +28,7 @@ nodeCron.schedule('0 * * * * ', async () => {
         await transporter.sendMail(mailOptions)
     }
     catch(error){
-        res.status(500).send("something went wrong")
+        console.log("something went wrong")
     }
 
 
