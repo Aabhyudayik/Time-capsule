@@ -26,13 +26,14 @@ nodeCron.schedule('* * * * * ', async () => {
     }
     try{
         await transporter.sendMail(mailOptions)
+        await capsule.deleteOne()
     }
     catch(error){
-        console.log("something went wrong")
+        console.log(error)
     }
 
 
-    await capsule.deleteOne()
+    
 
 
    }
