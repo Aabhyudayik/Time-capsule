@@ -1,12 +1,13 @@
 import express from "express"
 import connect from "./db.js"
 import Capsule from "./capsule.js"
+const port = process.env.PORT || 3000 
 const app= express()
 app.use(express.static('./frontend'))
 async function start(){
     await connect()
     await import("./scheduler.js")
-    app.listen(3000)
+    app.listen(port)
     
 }
 app.use(express.json({ limit: '10mb' }))
