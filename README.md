@@ -72,17 +72,8 @@ Time Capsule/
 
 ---
 
-## Setup
 
-1. Clone the repo
-2. Run `npm install`
-3. Create a `.env` file in the root with your MongoDB connection string:
-```
-MONGO_URI=your_mongodb_atlas_uri
-```
-4. Run `npm run dev`
-5. Open `http://localhost:3000`
 
----
+
 
 Built by Aabhyudayik
