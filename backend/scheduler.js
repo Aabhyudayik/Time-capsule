@@ -8,7 +8,7 @@ const transporter = nodemailer.createTransport({
         pass: process.env.EMAIL_PASSWORD
     }
 })
-nodeCron.schedule('* * * * * ', async () => {
+nodeCron.schedule('0 0 * * * ', async () => {
    const capsules =await Capsule.find({random_date:{$lte: new Date()}})
    for(const capsule of capsules){
     const mailOptions={
